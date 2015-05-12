@@ -15,4 +15,6 @@
  */
 package com.github.tototoshi.csv
 
-class MalformedCSVException(message: String) extends Exception(message)
+import java.io.Serializable
+
+class MalformedCSVException(message: String) extends Exception(message) with Serializable

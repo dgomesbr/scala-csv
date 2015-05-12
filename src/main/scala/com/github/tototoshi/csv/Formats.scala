@@ -15,7 +15,9 @@
 */
 package com.github.tototoshi.csv
 
-trait DefaultCSVFormat extends CSVFormat {
+import java.io.Serializable
+
+trait DefaultCSVFormat extends CSVFormat with Serializable {
 
   val delimiter: Char = ','
 
@@ -31,7 +33,7 @@ trait DefaultCSVFormat extends CSVFormat {
 
 }
 
-trait TSVFormat extends CSVFormat {
+trait TSVFormat extends CSVFormat with Serializable{
 
   val delimiter: Char = '\t'
 
